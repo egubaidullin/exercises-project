@@ -1,48 +1,111 @@
 body {
-      font-family: sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .app-container {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      width: 100%;
       min-height: 100vh;
-      background-color: #f0f0f0;
+      position: relative;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 5px;
+    }
+
+    .language-switcher button {
+      padding: 8px 12px;
+      border: none;
+      background-color: #e0e0e0;
+      color: #333;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .language-switcher button:hover {
+      background-color: #d0d0d0;
     }
 
     .workout-container {
       width: 90%;
-      max-width: 600px;
+      max-width: 700px;
       padding: 20px;
       background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
+      margin-bottom: 20px;
     }
 
     .day-title {
-      font-size: 1.5em;
-      margin-bottom: 10px;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #2c3e50;
     }
 
     .workout-text {
       white-space: pre-line;
       text-align: left;
+      line-height: 1.6;
+      color: #555;
     }
 
-    .language-switcher {
-      margin-top: 20px;
-    }
-
-    .language-switcher button {
-      margin: 0 5px;
-      padding: 8px 12px;
-      border: none;
-      background-color: #007bff;
-      color: white;
+    .progress-bar-container {
+      width: 90%;
+      max-width: 700px;
+      height: 8px;
+      background-color: #e0e0e0;
       border-radius: 4px;
-      cursor: pointer;
+      margin-bottom: 15px;
     }
 
-    .language-switcher button:hover {
-      background-color: #0056b3;
+    .progress-bar {
+      height: 100%;
+      background-color: #2ecc71;
+      border-radius: 4px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 700px;
+      margin-top: 15px;
+    }
+
+    .nav-buttons button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-buttons button:disabled {
+      background-color: #bdc3c7;
+      cursor: not-allowed;
+    }
+
+    .nav-buttons button:hover:not(:disabled) {
+      background-color: #2980b9;
     }
